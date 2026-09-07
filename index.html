@@ -3,193 +3,206 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Un secreto se está cocinando en Valdemoro</title>
+<title>Acceso Privado — Valdemoro</title>
+
+<!-- Favicon e Icono Web -->
+<link rel="icon" href="ultra-secreto.png" type="image/png">
+<link rel="apple-touch-icon" href="ultra-secreto.png">
+
+<!-- Tipografías Premium desde Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="icon" type="image/png" href="https://github.com/cominggsoon/cominggsoon.github.io/blob/9eb03eedeb3f7bbb78f426bb4c257c3d41dbb568/ultra-secreto.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
   :root{
-    --espresso: #12100E;
-    --espresso-soft: #1E1B18;
-    --stone: #ECE6DA;
-    --stone-line: #D5C9B3;
-    --ivory: #F9F7F2;
-    --brass: #B08B57;
-    --ink: #1C1814;
-    --ink-soft: rgba(28,24,20,0.72);
-    --cream-text: rgba(249,247,242,0.88);
-    --cream-text-soft: rgba(249,247,242,0.55);
+    --obsidian: #0B0A0A;
+    --obsidian-card: #141312;
+    --gold: #C5A059;
+    --gold-soft: #D8B97C;
+    --ivory: #F5F3EF;
+    --ivory-muted: rgba(245,243,239,0.70);
+    --border-dark: #262422;
+    --border-light: #E2DDD5;
+    --bg-light: #FAFA98;
   }
 
   *{ box-sizing:border-box; }
   html{ scroll-behavior:smooth; }
   body{
     margin:0;
-    background:var(--stone);
-    color:var(--ink);
-    font-family:'Inter', sans-serif;
-    -webkit-font-smoothing:antialiased;
+    background: var(--obsidian);
+    color: var(--ivory);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    word-break: break-word;
   }
-  h1,h2,.serif{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    letter-spacing:-0.01em;
+
+  h1, h2, .serif{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
   }
 
   /* ---------- HERO ---------- */
   .hero{
-    background:var(--espresso);
-    color:var(--cream-text);
-    padding: 4.5rem 1.5rem 3.5rem;
+    background: var(--obsidian);
+    padding: 5rem 1.5rem 4rem;
+    border-bottom: 1px solid var(--border-dark);
   }
   .hero-inner{
-    max-width: 620px;
+    max-width: 580px;
     margin: 0 auto;
   }
-  .mark{
-    width:34px; height:34px;
-    margin-bottom: 2rem;
+  .brand-icon{
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-bottom: 2.25rem;
+    display: block;
+  }
+  .tag{
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.25rem;
+    font-weight: 600;
   }
   .hero h1{
-    font-size: clamp(2rem, 5.5vw, 2.85rem);
-    line-height: 1.18;
-    margin: 0 0 1.25rem;
+    font-size: clamp(2.2rem, 6vw, 3.2rem);
+    line-height: 1.12;
+    margin: 0 0 1.5rem;
     color: var(--ivory);
+    font-weight: 400;
   }
   .hero p{
-    font-size: 1.08rem;
-    line-height: 1.6;
-    color: var(--cream-text);
-    margin: 0 0 2rem;
-    max-width: 48ch;
-  }
-  .hero .rule{
-    width: 46px; height: 1px;
-    background: var(--brass);
-    border:none;
-    margin: 0 0 1.25rem;
-  }
-  .hero .place{
-    font-size: 0.9rem;
-    color: var(--brass);
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin: 0 0 2rem;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--ivory-muted);
+    margin: 0 0 2.25rem;
+    font-weight: 300;
   }
   .cta-link{
-    display:inline-flex;
-    align-items:center;
-    gap:0.6rem;
-    color: var(--ivory);
-    text-decoration:none;
-    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.92rem;
     font-weight: 500;
-    border-bottom: 1px solid var(--brass);
-    padding-bottom: 4px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 6px;
     transition: opacity .2s ease;
   }
-  .cta-link:hover{ opacity:0.75; }
+  .cta-link:hover{ opacity: 0.8; }
 
-  /* ---------- PHILOSOPHY ---------- */
-  .philosophy{
-    padding: 3.5rem 1.5rem;
-    border-bottom: 1px solid var(--stone-line);
+  /* ---------- STATEMENT ---------- */
+  .statement{
+    padding: 4rem 1.5rem;
+    background: #11100F;
+    border-bottom: 1px solid var(--border-dark);
   }
-  .philosophy-inner{
-    max-width: 620px;
+  .statement-inner{
+    max-width: 580px;
     margin: 0 auto;
   }
-  .philosophy .quote{
-    font-family:'Fraunces', serif;
+  .statement .quote{
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-weight: 400;
-    font-size: clamp(1.4rem, 3.8vw, 1.9rem);
-    line-height: 1.4;
-    color: var(--ink);
+    font-size: clamp(1.5rem, 4.2vw, 2.1rem);
+    line-height: 1.35;
+    color: var(--ivory);
     margin: 0 0 1.25rem;
+    font-weight: 400;
   }
-  .philosophy p{
-    font-size: 1.02rem;
+  .statement p{
+    font-size: 0.98rem;
     line-height: 1.7;
-    color: var(--ink-soft);
+    color: var(--ivory-muted);
     margin: 0;
-    max-width: 52ch;
+    font-weight: 300;
   }
 
   /* ---------- FORM SECTION ---------- */
   .form-section{
     background: var(--ivory);
-    padding: 3.5rem 1.5rem 4.5rem;
+    color: var(--obsidian);
+    padding: 4.5rem 1.5rem 5rem;
   }
   .form-inner{
     max-width: 480px;
     margin: 0 auto;
   }
   .form-section h2{
-    font-size: clamp(1.5rem, 3.6vw, 2rem);
-    line-height:1.25;
-    margin: 0 0 0.75rem;
+    font-size: clamp(1.8rem, 4.5vw, 2.4rem);
+    line-height: 1.2;
+    margin: 0 0 0.85rem;
+    color: var(--obsidian);
   }
   .form-section .lede{
-    font-size: 0.98rem;
-    color: var(--ink-soft);
-    line-height:1.6;
-    margin: 0 0 2.25rem;
+    font-size: 0.95rem;
+    color: rgba(11,10,10,0.72);
+    line-height: 1.6;
+    margin: 0 0 2.5rem;
+    font-weight: 400;
   }
 
   .field{
-    margin-bottom: 2rem;
+    margin-bottom: 2.25rem;
   }
   .field label.field-label{
-    display:block;
-    font-size: 0.98rem;
-    font-weight: 500;
-    color: var(--ink);
+    display: block;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--obsidian);
     margin-bottom: 0.85rem;
-    line-height:1.4;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
   }
   .field input[type="email"],
   .field input[type="text"]{
-    width:100%;
-    border:none;
-    border-bottom: 1px solid var(--stone-line);
-    background:transparent;
-    padding: 0.75rem 0.1rem;
-    font-family:'Inter', sans-serif;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--border-light);
+    background: transparent;
+    padding: 0.85rem 0.1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 1rem;
-    color: var(--ink);
-    outline:none;
+    color: var(--obsidian);
+    outline: none;
     border-radius: 0;
     transition: border-color .2s ease;
   }
   .field input[type="email"]:focus,
   .field input[type="text"]:focus{
-    border-bottom-color: var(--brass);
+    border-bottom-color: var(--gold);
   }
   .field input::placeholder{
-    color: rgba(28,24,20,0.35);
+    color: rgba(11,10,10,0.35);
   }
 
   .choices{
-    display:flex;
-    flex-direction:column;
-    gap:0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
   }
   .choice{
-    display:flex;
-    align-items:center;
-    gap:0.8rem;
-    font-size: 0.95rem;
-    color: var(--ink-soft);
-    line-height:1.4;
-    cursor:pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    font-size: 0.92rem;
+    color: rgba(11,10,10,0.8);
+    line-height: 1.4;
+    cursor: pointer;
     padding: 0.2rem 0;
   }
   .choice input{
     margin: 0;
-    accent-color: var(--brass);
+    accent-color: var(--gold);
     width: 20px;
     height: 20px;
     flex-shrink: 0;
@@ -197,67 +210,75 @@
   }
 
   button.submit{
-    width:100%;
-    background: var(--espresso);
+    width: 100%;
+    background: var(--obsidian);
     color: var(--ivory);
-    border:none;
+    border: 1px solid var(--obsidian);
     padding: 1.15rem 1.25rem;
-    font-family:'Inter', sans-serif;
-    font-size: 1rem;
-    font-weight:500;
-    border-radius: 2px;
-    cursor:pointer;
-    margin-top: 1rem;
-    transition: background .2s ease;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 1.25rem;
+    transition: all .25s ease;
   }
-  button.submit:hover{ background: var(--espresso-soft); }
-  button.submit:disabled{ opacity:0.6; cursor:default; }
+  button.submit:hover{ 
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--obsidian);
+  }
+  button.submit:disabled{ opacity: 0.5; cursor: default; }
 
   .privacy-note{
-    font-size: 0.8rem;
-    color: rgba(28,24,20,0.45);
+    font-size: 0.78rem;
+    color: rgba(11,10,10,0.45);
     margin-top: 1.25rem;
-    text-align:center;
+    text-align: center;
+    line-height: 1.5;
   }
 
   .form-error{
-    display:none;
+    display: none;
     font-size: 0.85rem;
-    color: #A3402F;
+    color: #9E2A2B;
     margin-top: 1rem;
     text-align: center;
   }
 
   .thanks{
-    display:none;
-    text-align:center;
+    display: none;
+    text-align: center;
     padding: 3rem 0;
   }
   .thanks .serif{
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin: 0 0 0.8rem;
-    color: var(--ink);
+    color: var(--obsidian);
   }
   .thanks p{
-    font-size: 1.05rem;
-    color: var(--ink-soft);
-    line-height:1.6;
+    font-size: 1rem;
+    color: rgba(11,10,10,0.75);
+    line-height: 1.6;
   }
 
   /* ---------- FOOTER ---------- */
   footer{
-    background: var(--espresso);
-    color: var(--cream-text-soft);
-    text-align:center;
-    padding: 2.25rem 1.5rem;
-    font-size: 0.82rem;
-    letter-spacing: 0.03em;
+    background: var(--obsidian);
+    color: var(--ivory-muted);
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border-top: 1px solid var(--border-dark);
   }
 
   @media (max-width: 480px){
-    .hero{ padding: 3.5rem 1.25rem 2.5rem; }
-    .philosophy{ padding: 2.75rem 1.25rem; }
-    .form-section{ padding: 2.75rem 1.25rem 3.5rem; }
+    .hero{ padding: 3.5rem 1.25rem 3rem; }
+    .statement{ padding: 3rem 1.25rem; }
+    .form-section{ padding: 3.25rem 1.25rem 4rem; }
   }
 </style>
 </head>
@@ -265,22 +286,18 @@
 
   <section class="hero">
     <div class="hero-inner">
-      <svg class="mark" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="17" cy="17" r="16" stroke="#B08B57" stroke-width="1"/>
-        <circle cx="17" cy="17" r="4" fill="#B08B57"/>
-      </svg>
-      <h1>No somos para todo el mundo. Ni pretendemos serlo.</h1>
-      <p>Algo muy exclusivo se está cocinando en Valdemoro. De esos sitios que hacen que cuando te pregunten la edad, tengas que enseñar el DNI para que te crean. Pero antes de abrir las puertas, solo unos pocos tendrán pase VIP.</p>
-      <hr class="rule">
-      <p class="place">Valdemoro - Próximamente</p>
-      <a class="cta-link" href="#form">Quiero estar en la lista VIP &rarr;</a>
+      <img src="ultra-secreto.png" alt="Icono" class="brand-icon">
+      <span class="tag">Valdemoro &bull; Zona Hospital</span>
+      <h1>Forma parte de algo que está a punto de suceder.</h1>
+      <p>Un nuevo concepto de medicina estética y salud cutánea abre sus puertas próximamente. Un espacio privado donde la discreción, la ciencia y el trato exquisito priman sobre el ruido.</p>
+      <a class="cta-link" href="#form">Solicitar acceso preferente &rarr;</a>
     </div>
   </section>
 
-  <section class="philosophy">
-    <div class="philosophy-inner">
-      <p class="quote">"Los mejores secretos son los que se notan, pero no se cuentan."</p>
-      <p>Cero retoques exagerados. Cero caras en serie. Solo medicina estética de altísimo nivel, la tecnología más avanzada y la discreción que te mereces. Para ser tener la piel con más glow nadie sepa exactamente cuál es tu truco.</p>
+  <section class="statement">
+    <div class="statement-inner">
+      <p class="quote">"La verdadera elegancia reside en los detalles que no necesitan explicarse."</p>
+      <p>Diseñamos tratamientos a medida respaldados por tecnología médica de vanguardia. Queremos dar el primer paso junto a quienes valoran los resultados naturales y una atención libre de prisas.</p>
     </div>
   </section>
 
@@ -288,58 +305,58 @@
     <div class="form-inner">
 
       <div id="formWrapper">
-        <h2>Entra en el círculo antes de la apertura</h2>
-        <p class="lede">Las plazas de lanzamiento y promociones secretas serán limitadas. Dinos qué te pide el cuerpo y te guardamos sitio.</p>
+        <h2>Acceso confidencial previo a la apertura</h2>
+        <p class="lede">¿Quieres ser de las primeras personas en descubrir nuestro nombre, nuestro equipo médico y el menú de tratamientos?</p>
 
         <form id="signupForm">
           <input type="hidden" name="access_key" id="accessKey" value="d62d30c9-9b37-476c-af7d-b470c864119d">
           
           <div class="field">
-            <label class="field-label" for="email">Tu email (prometemos guardar el secreto)</label>
-            <input type="email" id="email" name="email" placeholder="tunombre@email.com" required autocomplete="email" inputmode="email">
+            <label class="field-label" for="email">Tu correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="ejemplo@email.com" required autocomplete="email" inputmode="email">
           </div>
 
           <div class="field">
-            <label class="field-label">Si pudieras hacerte UN solo tratamiento mañana mismo, ¿cuál sería?</label>
+            <label class="field-label">¿Qué información te gustaría recibir en exclusiva antes de la apertura?</label>
             <div class="choices">
-              <label class="choice"><input type="checkbox" name="interes[]" value="Efecto buena cara inmediato / Piel brillante"> Efecto "buena cara" inmediato (luminosidad y piel de porcelana)</label>
-              <label class="choice"><input type="checkbox" name="interes[]" value="Inyectables discretos (Botox / Ácido)"> Inyectables sutiles (adiós arrugas sin perder tu expresión)</label>
-              <label class="choice"><input type="checkbox" name="interes[]" value="Remodelación corporal / Firmeza"> Remodelación corporal y firmeza VIP</label>
-              <label class="choice"><input type="checkbox" name="interes[]" value="Labios o pómulos naturales"> Labios o pómulos irresistibles pero 100% naturales</label>
-              <label class="choice"><input type="checkbox" name="interes[]" value="Reset de piel / Manchas"> Reset total de piel y eliminación de manchas</label>
+              <label class="choice"><input type="checkbox" name="deseo[]" value="Revelar nombre y concepto"> Descubrir en primicia el nombre y la fecha oficial de apertura</label>
+              <label class="choice"><input type="checkbox" name="deseo[]" value="Conocer equipo medico"> Conocer al equipo médico y nuestra filosofía de trabajo</label>
+              <label class="choice"><input type="checkbox" name="deseo[]" value="Carta de tratamientos faciales"> Consultar el menú privado de tratamientos faciales y tecnología de piel</label>
+              <label class="choice"><input type="checkbox" name="deseo[]" value="Inyectables y medicina estetica"> Medicina estética avanzada e inyectables de autor</label>
+              <label class="choice"><input type="checkbox" name="deseo[]" value="Condiciones exclusivas apertura"> Acceso a las condiciones especiales para los primeros miembros</label>
             </div>
           </div>
 
           <div class="field">
-            <label class="field-label" for="falta">¿Qué es lo que más te molesta de las clínicas tradicionales?</label>
-            <input type="text" id="falta" name="que_falta" placeholder="Poco tiempo, precios oscuros, prisas, poca privacidad...">
+            <label class="field-label" for="sugerencias">¿Qué buscas o echas en falta en los centros de medicina estética actuales?</label>
+            <input type="text" id="sugerencias" name="sugerencias" placeholder="Diagnóstico riguroso, más tiempo en consulta, máxima discreción...">
           </div>
 
           <div class="field">
-            <label class="field-label">¿A qué hora te escapas mejor?</label>
+            <label class="field-label">Franja horaria de tu preferencia para visitas:</label>
             <div class="choices">
-              <label class="choice"><input type="radio" name="horario" value="Mañanas de relax"> Mañanas de relax</label>
-              <label class="choice"><input type="radio" name="horario" value="Tardes tras el trabajo"> Tardes tras el trabajo</label>
-              <label class="choice"><input type="radio" name="horario" value="Escapada de fin de semana"> Escapada de fin de semana</label>
+              <label class="choice"><input type="radio" name="horario" value="Mañanas"> Mañanas</label>
+              <label class="choice"><input type="radio" name="horario" value="Tardes"> Tardes</label>
+              <label class="choice"><input type="radio" name="horario" value="Sábados"> Sábados</label>
             </div>
           </div>
 
-          <button type="submit" class="submit" id="submitBtn">Acceder a la lista VIP &rarr;</button>
-          <p class="form-error" id="formError">Algo ha ido mal. Inténtalo de nuevo en un segundo.</p>
-          <p class="privacy-note">Solo recibirás invitaciones privadas y ventajas exclusivas de apertura. Cero spam.</p>
+          <button type="submit" class="submit" id="submitBtn">Unirme al registro preferente</button>
+          <p class="form-error" id="formError">Se ha producido un error al enviar tus datos. Por favor, inténtalo de nuevo.</p>
+          <p class="privacy-note">Tu contacto será tratado con absoluta confidencialidad. Solo lo usaremos para enviarte la invitación oficial.</p>
         </form>
       </div>
 
       <div class="thanks" id="thanksMessage">
-        <p class="serif">Estás dentro.</p>
-        <p>Has asegurado tu lugar en la lista. Serás de las primeras personas en enterarte de la fecha exacta de apertura y de las sorpresas que tenemos preparadas.</p>
+        <p class="serif">Registro completado.</p>
+        <p>Gracias por formar parte de esto. Te mantendremos informado en primicia a través de tu correo electrónico.</p>
       </div>
 
     </div>
   </section>
 
   <footer>
-    VALDEMORO — ZONA HOSPITAL
+    Valdemoro &bull; Edición Limitada de Apertura
   </footer>
 
   <script>
@@ -353,7 +370,7 @@
       e.preventDefault();
       formError.style.display = 'none';
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Guardando tu sitio...';
+      submitBtn.textContent = 'Procesando registro...';
 
       const data = new FormData(form);
 
@@ -374,10 +391,11 @@
       } catch (err) {
         formError.style.display = 'block';
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Acceder a la lista VIP →';
+        submitBtn.textContent = 'Unirme al registro preferente';
       }
     });
   </script>
 
 </body>
 </html>
+
